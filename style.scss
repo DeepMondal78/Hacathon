@@ -17,7 +17,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: #040608;
+    background: var(--background);
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .logo {
-    color: #fff;
+    color: var(--textcolor);
     font-size: 24px;
     font-weight: bold;
 }
@@ -72,27 +72,8 @@ body {
     transition: top 1s ease-out;
 }
 
-// .hero {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// h1 {
-//     position: absolute;
-//     top: 25%;
-//     font-size: 17rem;
-//     font-family: 'Teko';
-//     color: #fff;
-// }
-
-.container {
+.hero {
     display: flex;
-    gap: 50px;
-}
-
-
-.conatiner img:hover {
-    cursor: pointer;
-    background-color: yellow;
+    justify-content: center;
+    align-items: center;
 }
