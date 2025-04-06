@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SF Pro Display, sans-serif;
+}
+
+html,
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  z-index: 999;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav h2 {
+  letter-spacing: -1px;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header nav ul a {
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+header nav ul a span {
+  display: inline-block;
+  transform: translateY(0%);
+}
+header nav ul a span::after {
+  content: attr(data-letter);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #fff;
+  transition: top 1s ease-out;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .cursor {
+  width: 50%;
+  height: 50%;
+  background: rgba(94, 255, 89, 0.2784313725);
+  border-radius: 50%;
+  animation: blob 8s infinite ease-in-out;
+  position: absolute;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.2s all ease-out;
+}
+@keyframes blob {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  25% {
+    transform: scale(1.1, 0.9) translate(-50%, -50%);
+    border-radius: 45% 55% 60% 40%;
+  }
+  50% {
+    transform: scale(0.95, 1.05) translate(-50%, -50%);
+    border-radius: 60% 40% 45% 55%;
+  }
+  75% {
+    transform: scale(1.05, 0.95) translate(-50%, -50%);
+    border-radius: 50% 60% 40% 50%;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
+main .main-cursor {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(./cursor.png);
+  background-size: cover;
+  background-position: center;
+}
