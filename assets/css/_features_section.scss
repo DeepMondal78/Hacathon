@@ -1,0 +1,97 @@
+@import "variables";
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-secondary ; // Or use 
+
+}
+
+.features-section {
+    padding: 50px 20px;
+    background-color: $bg-secondary ; // Or use 
+    text-align: center;
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-section__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: $text-primary;
+}
+
+.features-section__subtitle {
+    font-size: 28px;
+    color: $text-primary;
+    margin: 10px 0;
+}
+
+.features-section__description {
+    font-size: 18px;
+    color: $text-primary;
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-section__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap; // for responsive
+    padding: 0 20px;
+}
+
+.features-section__features {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    padding: 10px;
+}
+
+.features-section__image-wrapper {
+    width: 300px;
+    height: 400px;
+    background-image: url('../images/smartwatch.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list__item {
+    font-size: 18px;
+    line-height: 2;
+    color: $text-primary;
+}
+
+// Optional: Responsive style
+@media (max-width: 768px) {
+    .features-section__content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-section__features {
+        text-align: center;
+    }
+}
