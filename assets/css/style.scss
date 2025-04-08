@@ -15,17 +15,7 @@ body {
 @import "navbar";
 @import "herosection";
 @import "features_section";
+@import "collection";
 
 
 
-
-.container {
-    display: flex;
-    gap: 50px;
-}
-
-
-.conatiner img:hover {
-    cursor: pointer;
-    background-color: yellow;
-}

@@ -96,6 +96,20 @@ body {
   overflow-x: hidden;
 }
 
+/* mouse curser */
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  /* so that it stays on top of all other elements */
+}
+
 .features-section {
   padding: 50px 20px;
   text-align: center;
@@ -294,6 +308,26 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.choose-section .watch-fectures-box {
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.choose-section .watch-fectures-box .fectures-item-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.choose-section .watch-fectures-box .fectures-item-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .choose-section .choose_bottom_part {
   width: 100%;
   height: auto;
@@ -316,19 +350,71 @@ body {
   margin-top: 50px;
   width: 100%;
   height: 100vh;
+  padding: 30px;
+}
+.our-collection h1 {
+  text-align: center;
+  z-index: 9;
+  color: #fff;
+  font-size: 2rem;
+}
+.our-collection .container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  width: 30rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card .btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #00ff6a;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card .btn:hover {
+  background: #00cc58;
+}
+.card .like-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.card .like-icon:hover {
+  color: #ff4d4d;
 }
 
 @media (max-width: 450px) {
   .watch-ui {
     width: 10rem;
   }
-}
-.container {
-  display: flex;
-  gap: 50px;
-}
-
-.conatiner img:hover {
-  cursor: pointer;
-  background-color: yellow;
 }
