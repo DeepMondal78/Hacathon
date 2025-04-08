@@ -1,0 +1,74 @@
+@import "variables";
+
+// collection page style
+
+.collection {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.9));
+
+    .title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+
+    }
+
+    .main-heading {
+        width: 30rem;
+        margin: auto;
+
+        .animPara {
+            width: 100%;
+            font-size: 1.2rem; // or px, em, %, etc.
+            margin-right: 0.5rem;
+
+            .word {
+                display: inline-block;
+
+                overflow: hidden;
+            }
+
+            .word span {
+                display: inline-block;
+                font-size: 1rem;
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+.products-section {
+    width: 100%;
+    height: 100vh;
+    background: #222123;
+    position: relative;
+
+}
+
+.vdiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+.vdiv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cricle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+}

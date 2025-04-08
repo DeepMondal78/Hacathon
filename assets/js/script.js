@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 function animateMenuItem(el) {
   let letters = el.textContent.split('').map(letter => {
     return `<span data-letter="${letter}">${letter}</span>`;
@@ -50,3 +52,95 @@ function loco() {
 }
 
 loco()
+
+// collection animtion 
+
+function collection() {
+
+}
+
+collection();
+
+function textAnimation() {
+  const paras = document.querySelectorAll(".animPara");
+  let allInnerSpans = [];
+
+  paras.forEach((para) => {
+    const words = para.textContent.split(" ");
+    console.log(words);
+
+    para.innerHTML = "";
+
+    words.forEach((word) => {
+      console.log(word);
+
+      const wordWrapper = document.createElement("span");
+      console.log(wordWrapper);
+
+      wordWrapper.classList.add("word");
+
+      const innerSpan = document.createElement("span");
+      console.log("innerspan", innerSpan);
+
+      innerSpan.textContent = word + " ";
+      wordWrapper.appendChild(innerSpan);
+
+      para.appendChild(wordWrapper);
+      console.log(wordWrapper);
+      allInnerSpans.push(innerSpan); // collect here
+
+
+    });
+
+    gsap.to(para.querySelectorAll(".word span"), {
+
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      stagger: 0.05,
+      ease: "power2.out"
+    });
+  });
+}
+textAnimation()
+
+function productVideoAnimation() {
+  gsap.to(".vdiv", {
+    "--clip": "100%",
+    ease: Power2,
+    durations: 0.12,
+    scrollTrigger: {
+      trigger: ".products-section",
+      pin: true,
+      scroller: "main",
+      start: "top top",
+      end: "bottom top",
+      markers: true,
+      scrub: 2,
+    }
+  })
+}
+
+productVideoAnimation()
+
+// Laptop section animation
+const laptopTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".laptop-section",
+    scroller: "main",
+    start: "50% 50%",
+    duration: 0.5,
+    end: "150% 50%",
+    scrub: 3,
+    pin: true,
+  }
+});
+
+laptopTl
+  .to("#card-one", { top: "60%", ease: "power2.out" }, "a")
+  .to("#card-two", { top: "60%", ease: "power2.out" }, "b+=0.2")
+  .to("#card-three", { top: "60%", ease: "power2.out" }, "c+=0.2")
+  .to("#card-four", { top: "60%", ease: "power2.out" }, "d+=0.2")
+  .to("#card-five", { top: "60%", ease: "power2.out" }, "e+=0.2");
+
+
