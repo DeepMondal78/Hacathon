@@ -13,6 +13,7 @@ body {
     background: #111;
     color: white;
     overflow-x: hidden;
+    overflow-y: hidden;
     cursor: url('cursor.png');
 }
 
@@ -30,7 +31,7 @@ a {
 $padding: 1.5rem 5rem;
 $tracking: -1px;
 $p-color: #5eff5947;
-
+$btn-color: rgb(54, 237, 54);
 header {
     position: fixed;
     width: 100%;
@@ -143,6 +144,88 @@ main {
         background-position: center;
         // background: red;
       }
+      .hero-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .aboutWatch {
+          padding: 80px;
+        }
+        .aboutWatch h1 {
+          font-size: 5rem;
+          font-weight: bold;
+          color: rgb(3, 181, 3);
+        }
+        .aboutWatch p {
+          margin-top: 20px;
+          line-height: 2rem;
+        }
+        .explore {
+          padding: 10px 20px;
+          margin-top: 80px;
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          background-color: $btn-color;
+        }
+        .watch {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+      
+          img {
+              position: relative;
+              z-index: 2;
+          }
+      
+          .watch-shadow {
+              position: absolute;
+              width: 420px; 
+              height: 420px;
+              background: #00ff00; 
+              opacity: 30%;
+              filter: blur(130px);
+              border-radius: 50%;
+              z-index: 1;
+          }
+
+          .watch-arrows {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            z-index: 3;
+          }
+
+          i {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #00ff00;
+            cursor: pointer;
+            transition: transform 0.3s;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+      }
+      
+      }
+      
 
     
 }

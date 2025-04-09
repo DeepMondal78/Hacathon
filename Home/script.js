@@ -47,6 +47,27 @@ document.addEventListener("DOMContentLoaded", ()=> {
       
       cursor();
 
+});
 
+const watchImages = [
+    "/Home/image/Home-hero-watch.png",
+    "/Home/image/image.png",
+    "/Home/image/image2.png",
+    "/Home/image/watch4.png",
+    "/Home/image/watch5.png"
+];
 
+let currentIndex = 0;
+const watchImg = document.getElementById("watch-img");
+const nextBtn = document.getElementById("next-watch");
+const prevBtn = document.getElementById("prev-watch");
+
+nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % watchImages.length;
+    watchImg.src = watchImages[currentIndex];
+});
+
+prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + watchImages.length) % watchImages.length;
+    watchImg.src = watchImages[currentIndex];
 });
