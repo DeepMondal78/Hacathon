@@ -441,11 +441,37 @@ body {
 }
 .collection {
   width: 100%;
-  height: 100vh;
   padding: 4rem 2rem;
   text-align: center;
   color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.9));
+  position: relative;
+}
+.collection .cursor-picture {
+  position: absolute;
+  opacity: 0;
+  width: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  pointer-events: none;
+  transform: scale(0.8);
+  z-index: 20;
+}
+.collection .bg-overly,
+.collection .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(26, 97, 43);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+.collection .bg-overly {
+  top: -19%;
+  right: -15%;
+}
+.collection .sec-bg-overly {
+  left: -4%;
+  bottom: -10%;
 }
 .collection .title {
   font-size: 1.5rem;
@@ -453,30 +479,66 @@ body {
   margin-bottom: 1rem;
 }
 .collection .main-heading {
-  width: 30rem;
+  padding: 1rem;
   margin: auto;
+  position: relative;
 }
 .collection .main-heading .animPara {
   width: 100%;
   font-size: 1.2rem;
-  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .collection .main-heading .animPara .word {
   display: inline-block;
+  font-size: 2rem;
+  margin-right: 1rem;
   overflow: hidden;
 }
 .collection .main-heading .animPara .word span {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 2rem;
   transform: translateY(100%);
   opacity: 0;
+}
+.collection .main-heading .animPara .imgdiv {
+  pointer-events: none;
+  position: absolute;
+  width: 200px !important;
+  height: 200px !important;
+  overflow: hidden;
+  z-index: 99;
+  background-color: red;
+}
+.collection .main-heading .animPara .imgdiv img {
+  transform: translateY(100%);
+  opacity: 0;
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .products-section {
   width: 100%;
   height: 100vh;
-  background: #222123;
   position: relative;
+}
+.products-section .bg-overly,
+.products-section .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(26, 97, 43);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+.products-section .bg-overly {
+  top: -19%;
+  right: -15%;
+}
+.products-section .sec-bg-overly {
+  left: -4%;
+  bottom: -10%;
 }
 
 .vdiv {
@@ -499,14 +561,244 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cricle i {
+  font-size: 60px !important;
+  color: #fff;
+}
+
+.earbuds-section {
+  padding: 2rem;
+  position: relative;
+}
+.earbuds-section .bg-overly,
+.earbuds-section .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(26, 97, 43);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+.earbuds-section .bg-overly {
+  top: -19%;
+  right: -15%;
+}
+.earbuds-section .sec-bg-overly {
+  left: -4%;
+  bottom: -10%;
+}
+.earbuds-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.earbuds-section .earbuds-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .earbuds-section .earbuds-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.earbuds-section .earbuds-grid .earbuds-card {
+  position: relative;
+  background: #282933;
+  width: 30rem !important;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  z-index: 9;
+}
+.earbuds-section .earbuds-grid .earbuds-card .product-img {
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+  display: block;
+}
+.earbuds-section .earbuds-grid .earbuds-card button {
+  position: relative;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 4px solid rgb(25, 232, 122);
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+  z-index: 2;
+}
+.earbuds-section .earbuds-grid .earbuds-card button::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: rgb(6, 198, 96);
+  color: black;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s all ease-in;
+  z-index: -1;
+}
+.earbuds-section .earbuds-grid .earbuds-card button:hover::after {
+  cursor: pointer;
+  top: -100%;
+}
+.earbuds-section .earbuds-grid .earbuds-card .heart-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.smartphone-section {
+  padding: 2rem;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.smartphone-section .bg-overly,
+.smartphone-section .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(26, 97, 43);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+.smartphone-section .bg-overly {
+  top: -19%;
+  right: -15%;
+}
+.smartphone-section .sec-bg-overly {
+  left: -4%;
+  bottom: -10%;
+}
+.smartphone-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.smartphone-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+.smartphone-section .card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  z-index: 9;
+}
+.smartphone-section .card:hover {
+  transform: scale(1.05);
+}
+.smartphone-section .card img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.smartphone-section .card .card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.smartphone-section .card .card-footer button {
+  position: relative;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 4px solid rgb(25, 232, 122);
+  color: #fff;
+  background: transparent;
+  overflow: hidden;
+  z-index: 2;
+}
+.smartphone-section .card .card-footer button::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: rgb(6, 198, 96);
+  color: black;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s all ease-in;
+  z-index: -1;
+}
+.smartphone-section .card .card-footer button:hover::after {
+  cursor: pointer;
+  top: -100%;
+}
+.smartphone-section .card .card-footer .heart {
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .smartphone-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 .laptop-section {
   position: relative;
   padding: 2rem;
   height: 100vh;
+}
+.laptop-section .bg-card {
+  position: absolute;
+  background-color: #2A2D35;
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  width: 35rem;
+  height: 35rem;
+}
+.laptop-section .bg-overly,
+.laptop-section .sec-bg-overly {
+  width: 35rem;
+  height: 35rem;
+  background-color: rgb(26, 97, 43);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+}
+.laptop-section .bg-overly {
+  top: -19%;
+  right: -15%;
+}
+.laptop-section .sec-bg-overly {
+  left: -4%;
+  bottom: -10%;
 }
 .laptop-section .laptop-member {
   position: relative;
@@ -615,11 +907,4 @@ body {
 .laptop-section .laptop-member #card-five {
   top: 450%;
   background-color: rgb(156, 9, 9);
-}
-.laptop-section .bottom-part {
-  padding: 1.25rem;
-}
-.laptop-section .bottom-part h1 {
-  font-size: 3rem;
-  font-weight: bold;
 }
