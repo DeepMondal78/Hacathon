@@ -52,15 +52,11 @@ function loco() {
 }
 
 loco()
-
 // collection animtion 
-
 function collection() {
 
 }
-
 collection();
-
 function textAnimation() {
   const paras = document.querySelectorAll(".animPara");
   let allInnerSpans = [];
@@ -103,44 +99,158 @@ function textAnimation() {
   });
 }
 textAnimation()
-
 function productVideoAnimation() {
+
   gsap.to(".vdiv", {
     "--clip": "100%",
-    ease: Power2,
-    durations: 0.12,
+    ease: Power2.easeOut,
+    duration: 0.12,
     scrollTrigger: {
       trigger: ".products-section",
       pin: true,
       scroller: "main",
       start: "top top",
       end: "bottom top",
-      markers: true,
       scrub: 2,
     }
   })
+
+
 }
 
 productVideoAnimation()
 
-// Laptop section animation
-const laptopTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".laptop-section",
-    scroller: "main",
-    start: "50% 50%",
-    duration: 0.5,
-    end: "150% 50%",
-    scrub: 3,
-    pin: true,
+let circle = document.querySelector(".cricle");
+let video = document.querySelector("video");
+video.pause();
+
+circle.addEventListener("click", () => {
+  console.log("hello");
+
+  if (video.paused) {
+    video.play();
+    console.log("video is playing");
+  } else {
+    video.pause();
+    console.log("video is paused");
   }
 });
+// Laptop section animation
+function laptopSectionnAnimtion() {
+  const laptopTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".laptop-section",
+      scroller: "main",
+      start: "50% 50%",
+      duration: 0.5,
+      dealy: 0.7,
+      end: "150% 50%",
+      scrub: 3,
+      pin: true,
+    }
+  });
 
-laptopTl
-  .to("#card-one", { top: "60%", ease: "power2.out" }, "a")
-  .to("#card-two", { top: "60%", ease: "power2.out" }, "b+=0.2")
-  .to("#card-three", { top: "60%", ease: "power2.out" }, "c+=0.2")
-  .to("#card-four", { top: "60%", ease: "power2.out" }, "d+=0.2")
-  .to("#card-five", { top: "60%", ease: "power2.out" }, "e+=0.2");
+  laptopTl
+    .to("#card-one", { top: "60%", ease: "power2.out" }, "a")
+    .to("#card-two", { top: "60%", ease: "power2.out" }, "b+=0.2")
+    .to("#card-three", { top: "60%", ease: "power2.out" }, "c+=0.2")
+    .to("#card-four", { top: "60%", ease: "power2.out" }, "d+=0.2")
+    .to("#card-five", { top: "60%", ease: "power2.out" }, "e+=0.2");
 
 
+}
+
+laptopSectionnAnimtion()
+
+VanillaTilt.init(document.querySelectorAll(".earbuds-card"), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.3,
+  scale: 1.05,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+  perspective: 1000
+});
+
+VanillaTilt.init(document.querySelectorAll(".card"), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.3,
+  scale: 1.05,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+  perspective: 1000
+});
+
+const imgArry = [
+  { url: "https://images.unsplash.com/photo-1632794716789-42d9995fb5b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1542541864-4abf21a55761?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1553545204-4f7d339aa06a?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1619037961428-e6410a7afd38?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1631281956016-3cdc1b2fe5fb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1523395451704-22c6fb0522cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1660844817855-3ecc7ef21f12?q=80&w=1986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://images.unsplash.com/photo-1658993376064-dd47b2da0e97?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { url: "https://picsum.photos/id/1060/200/200" },
+  { url: "https://picsum.photos/id/1070/200/200" },
+];
+
+
+const throttleFunction = (func, delay) => {
+  let prev = 0;
+  return (...args) => {
+    let now = new Date().getTime();
+    if (now - prev > delay) {
+      prev = now;
+      func(...args);
+    }
+  };
+};
+
+let container = document.querySelector(".main-heading");
+
+container.addEventListener("mousemove", throttleFunction((e) => {
+  // Create wrapper div
+  let creatediv = document.createElement("div");
+  creatediv.classList.add("imgdiv");
+  creatediv.style.position = "absolute";
+  creatediv.style.left = `${e.clientX - 100}px`;
+  creatediv.style.top = `${e.clientY - 100}px`;
+
+  // Get random image
+  const randomIndex = Math.floor(Math.random() * imgArry.length);
+  const randomImage = imgArry[randomIndex];
+
+  // Create image element
+  let createimg = document.createElement("img");
+  createimg.setAttribute("src", randomImage.url);
+  createimg.style.width = "100%";
+  createimg.style.height = "100%";
+  createimg.style.objectFit = "cover";
+
+  creatediv.appendChild(createimg);
+  console.log(creatediv);
+  console.log(createimg);
+  
+
+  container.appendChild(creatediv);
+
+
+  gsap.to(createimg, {
+    y: "0%",
+    opacity: 1,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+
+
+  gsap.to(createimg, {
+    y: "-100%",
+    opacity: 0,
+    delay: 1.5,
+    duration: 0.8,
+    ease: "power2.in",
+    onComplete: () => creatediv.remove()
+  });
+
+}, 300)); 

@@ -6,31 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>collection page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
 
 </head>
 
 <body>
     <main>
+
         <section class="collection">
+            <div class="bg-overly"></div>
+            <div class="sec-bg-overly"></div>
             <p class="title">ABOUT OUR COLLECTION</p>
             <div class="main-heading">
-                <p class="animPara"> Smart Watches, Smartphones, and Earbuds from one trusted brand—</p>
-                <p class="animPara"> Smart Watches, Smartphones, and Earbuds from one trusted brand—</p>
-                <p class="animPara"> Smart Watches, Smartphones, and Earbuds from one trusted brand—</p>
+                <p class="animPara"> Smarter Devices, Smarter Life</p>
+                <p class="animPara"> Smartwatches, Smartphones & Earbuds — All in One Place.</p>
+                <p class="animPara"> Start your smart journey today.</p>
                 <p class="animPara"> Smart Watches, Smartphones, and Earbuds from one trusted brand—</p>
             </div>
 
+
+
         </section>
-        <!--  -->
+
         <section class="products-section">
             <div class="vdiv" style="--clip: 0%">
-                <div class="cricle"></div>
-                <video autoplay loop muted src="./assets/coder.mp4"></video>
+                <div class="cricle">
+                    <i class="ri-play-circle-fill"></i>
+                </div>
+                <video loop muted src="./assets/coder.mp4"></video>
             </div>
         </section>
 
-        <div class="laptop-section">
+        <section class="earbuds-section">
+            <div class="bg-overly"></div>
+            <div class="sec-bg-overly"></div>
+            <h2 class="section-title">Our Earbuds Collection</h2>
+
+            <div class="earbuds-grid">
+
+                <div class="earbuds-card">
+                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <button class="see-more-btn">See More</button>
+                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
+                </div>
+
+
+                <div class="earbuds-card">
+                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <button class="see-more-btn">See More</button>
+                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
+                </div>
+
+
+                <div class="earbuds-card">
+                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <button class="see-more-btn">See More</button>
+                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
+                </div>
+
+
+                <div class="earbuds-card">
+                    <img src="./assets/images/earbud.png" alt="Earbuds" class="product-img" />
+                    <button class="see-more-btn">See More</button>
+                    <span class="heart-icon"><i class="ri-heart-3-fill"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="smartphone-section">
+            <div class="bg-overly"></div>
+            <div class="sec-bg-overly"></div>
+            <h2>Our SmartPhone Collection</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <div class="card-footer">
+                        <button class="see-more">See More</button>
+                        <span class="heart"><i class="ri-heart-3-fill"></i></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <div class="card-footer">
+                        <button class="see-more">See More</button>
+                        <span class="heart"><i class="ri-heart-3-fill"></i></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <div class="card-footer">
+                        <button class="see-more">See More</button>
+                        <span class="heart"><i class="ri-heart-3-fill"></i></span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./assets/images/smartphone.png" alt="Smartphone">
+                    <div class="card-footer">
+                        <button class="see-more">See More</button>
+                        <span class="heart"><i class="ri-heart-3-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="laptop-section">
+            <div class="bg-overly"></div>
+            <div class="sec-bg-overly"></div>
+            <div class="bg-card"></div>
             <div class="laptop-member">
                 <h2>Our Laptop Collection</h2>
 
@@ -94,11 +183,11 @@
                     </div>
                 </div>
 
-              
+
             </div>
 
-            
-        </div>
+
+        </section>
 
     </main>
 
@@ -108,7 +197,8 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
 </body>
 
 </html>

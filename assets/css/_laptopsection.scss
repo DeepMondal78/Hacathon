@@ -3,6 +3,37 @@
     padding: 2rem;
     height: 100vh;
 
+    .bg-card {
+        position: absolute;
+        background-color: #2A2D35;
+        @include backdropfilter(35px);
+        width: 35rem;
+        height: 35rem;
+
+    }
+
+    .bg-overly,
+    .sec-bg-overly {
+        width: 35rem;
+        height: 35rem;
+        background-color: $bg-overly;
+        border-radius: 50%;
+        filter: blur(50px);
+        position: absolute;
+    }
+
+    .bg-overly {
+        top: -19%;
+        right: -15%;
+    }
+
+    .sec-bg-overly {
+        left: -4%;
+        bottom: -10%;
+    }
+
+
+
     .laptop-member {
         position: relative;
         text-align: center;
@@ -122,12 +153,5 @@
         }
     }
 
-    .bottom-part {
-        padding: 1.25rem;
 
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-    }
 }
