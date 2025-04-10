@@ -129,8 +129,10 @@ main .hero-section .aboutWatch h1 {
 main .hero-section .aboutWatch p {
   margin-top: 20px;
   line-height: 2rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
 }
-main .hero-section .explore {
+main .hero-section .aboutWatch .exploreBtn {
   padding: 10px 20px;
   margin-top: 80px;
   border: none;
@@ -140,16 +142,24 @@ main .hero-section .explore {
   font-weight: 500;
   background-color: rgb(54, 237, 54);
 }
+main .hero-section .aboutWatch .exploreBtn.exploreBtn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, 0.8509803922);
+}
 main .hero-section .watch {
   position: relative;
+  top: 20px;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 main .hero-section .watch img {
-  position: relative;
+  width: 400px;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: opacity 0.5s ease;
   z-index: 2;
 }
 main .hero-section .watch .watch-shadow {
@@ -161,30 +171,6 @@ main .hero-section .watch .watch-shadow {
   filter: blur(130px);
   border-radius: 50%;
   z-index: 1;
-}
-main .hero-section .watch .watch-arrows {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  z-index: 3;
-}
-main .hero-section .watch i {
-  display: flex;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #00ff00;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-main .hero-section .watch i:hover {
-  transform: scale(1.2);
 }
 main .userSection {
   padding: 40px 80px;
@@ -199,6 +185,16 @@ main .userSection .userLoved {
   border: 1px solid #fff;
   border-radius: 15px;
   background-color: transparent;
+}
+main .userSection .userLoved .userImage {
+  display: flex;
+}
+main .userSection .userLoved .userImage .user1 img, main .userSection .userLoved .userImage .user2 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  align-items: center;
 }
 main .userSection .userLoved #text {
   width: 16%;
@@ -232,7 +228,7 @@ main .watchTheam .circle {
 main .watchTheam .logo {
   position: absolute;
   background-color: #fff;
-  background: url(/Home/image/image.png);
+  background: url(/Home/image/image\(6\).png);
   background-size: cover;
   width: 350px;
   height: 350px;
@@ -295,4 +291,18 @@ main .watchTheam .text .char {
   main .watchTheam .text .char {
     font-size: 0.4em;
   }
+}
+main .acDesigne {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 2rem;
+}
+main .acDesigne .div1 {
+  width: 500px;
+  height: 30px;
+  border: 12px solid #fff;
+  background-color: #00ff00;
 }

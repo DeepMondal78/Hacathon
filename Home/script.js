@@ -21,56 +21,33 @@ document.addEventListener("DOMContentLoaded", ()=> {
     });
 
     // ==== Cursor Hover Animetion ====
-    function cursor() {
-        const cursor = document.querySelector(".cursor");
-        let mouseX = 0;
-        let mouseY = 0;
-        let currentX = 0;
-        let currentY = 0;
-        const speed = 0.1; 
-      
-        document.body.addEventListener("mousemove", (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-        });
-      
-        function animate() {
-          currentX += (mouseX - currentX) * speed;
-          currentY += (mouseY - currentY) * speed;
-          cursor.style.left = currentX + "px";
-          cursor.style.top = currentY + "px";
-          requestAnimationFrame(animate);
-        }
-      
-        animate();
-      }
-      
-      cursor();
 
 });
-
+// ==== Hero Section Watch Animetion ====
 const watchImages = [
-    "/Home/image/Home-hero-watch.png",
-    "/Home/image/image.png",
-    "/Home/image/image2.png",
-    "/Home/image/watch4.png",
-    "/Home/image/watch5.png"
-];
-
-let currentIndex = 0;
-const watchImg = document.getElementById("watch-img");
-const nextBtn = document.getElementById("next-watch");
-const prevBtn = document.getElementById("prev-watch");
-
-nextBtn.addEventListener("click", () => {
+    "/Home/image/image(1).png",
+    "/Home/image/image(2).png",
+    "/Home/image/image(3).png",
+    "/Home/image/image(4).png",
+    "/Home/image/image(5).png"
+  ];
+  
+  let currentIndex = 0;
+  const watchImg = document.getElementById("watch-img");
+  
+  function updateImage() {
+    watchImg.style.opacity = 0;
+    setTimeout(() => {
+      watchImg.src = watchImages[currentIndex];
+      watchImg.style.opacity = 1;
+    }, 300);
+  }
+  
+  setInterval(() => {
     currentIndex = (currentIndex + 1) % watchImages.length;
-    watchImg.src = watchImages[currentIndex];
-});
-
-prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + watchImages.length) % watchImages.length;
-    watchImg.src = watchImages[currentIndex];
-});
+    updateImage();
+  }, 3000);
+  
 
 // ==== CircleText Animetion ====
 const text = document.getElementById("image-text");
