@@ -11,6 +11,11 @@ body {
   width: 100vw;
   background: #111;
   color: white;
+<<<<<<< HEAD
+  overflow-x: hidden;
+  cursor: url("cursor.png");
+=======
+>>>>>>> 7e7074801f393e36c3be5b0422e2d1f58147951b
 }
 
 ul {
