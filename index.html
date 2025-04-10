@@ -4,43 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smartwatch Launch</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <!-- ========= TITLE LOGO  ========= -->
+    <link rel="icon" href="">
+    <!-- ========= CUSTOM CSS  ========= -->
+    <link rel="stylesheet" href="/Home/style.css">
+    <!-- ========= font awesome cdn  ========= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- ========= google fonts  ========= -->
+
 </head>
 
 <body>
-    <main>
-        <nav class="navbar">
-            <span class="logo">timetrove</span>
-            <div class="menu">
-                <a href="#" class="menu-item">Home </a>
-                <a href="#" class="menu-item">Features </a>
-                <a href="#" class="menu-item">Customize </a>
-                <a href="#" class="menu-item">Health & Fitness </a>
-                <a href="#" class="menu-item">Reviews </a>
-                <a href="#" class="menu-item">Pre-Order Now </a>
-            </div>
+    <!-- ========= Nav Bar  ========= -->
+    <header>
+        <nav>
+            <a href="">
+                <h2>Janina Watch</h2>
+            </a>
+            <ul>
+                <li><a href="index.html" class="menu-item">Home</a></li>
+                <li><a href="#" class="menu-item">About</a></li>
+                <li><a href="features.html" class="menu-item">Features</a></li>
+                <li><a href="collection.html" class="menu-item">Collection</a></li>
+                <li><a href="#" class="menu-item">Contact Us</a></li>
+            </ul>
         </nav>
-
-        <!-- hero section start here  -->
+    </header>
+    <main>
+        <!-- <div class="cursor"></div> -->
+        <div class="main-cursor"></div>
+        <!-- ========= HERO SECTION  ========= -->
         <section class="hero-section">
-            <div class="hero-left-part">
-                <h1 class="hero-title">Introducing TimeTrove</h1>
-                <h2 class="hero-subtitle">The Smartwatch that Knows You</h2>
-
+            <div class="aboutWatch">
+                <h1>Smart Watch</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique doloremque excepturi cum
+                    accusamus corrupti omnis veniam corporis quo eaque? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Eum hic molestias itaque voluptatem eaque sequi, quidem aut, explicabo eligendi
+                    iure temporibus pariatur, quaerat laborum aliquam dolorum illum inventore laboriosam tenetur
+                    consequatur nobis fugit minima incidunt doloribus! Nemo doloremque dolorem eveniet odit fuga veniam
+                    repellat voluptates quaerat eos similique, veritatis atque?</p>
+                <button class="explore">Explore More</button>
             </div>
-            <div class="hero-right-part">
-
+            <div class="watch">
+                <span class="filter"></span>
+                <div class="watch-shadow"></div>
+                <img id="watch-img" src="/Home/image/Home-hero-watch.png" alt="">
+                <div class="watch-arrows">
+                    <i class="fas fa-chevron-left" id="prev-watch"></i>
+                    <i class="fas fa-chevron-right" id="next-watch"></i>
+                </div>
             </div>
         </section>
-        <!-- hero section end here -->
+        <!-- ========= USERLOVED SECTION  ========= -->
+        <div class="userSection">
+            <div class="userLoved">
+                <text id="text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sequi velit dolore doloremque
+                        quo cumque consequatur, maxime rerum molestiae tempora.</p>
+                </text>
+                <div id="user">
+                    <em class="userImage">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </em>
+                    <h3>500K</h3>
+                    <br>
+                    <p>Lorem, ipsum dolor</p>
+                </div>
+                <text id="text">
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sequi velit dolore doloremque
+                        quo cumque consequatur, maxime rerum molestiae tempora.</p>
+                </text>
+            </div>
+        </div>
+        <!-- ========= WATCHTHEAM SECTION  ========= -->
+        <section class="watchTheam">
+            <div class="circle">
+                <div class="logo">
 
-       
+                </div>
+                <div class="text" id="image-text">
+                    <p></p>
+                </div>
+            </div>
+        </section>
+ <!-- ========= ACCESSORY DESIGNE SECTION  ========= -->
+
+ <section class="acDesigne">
+    <h1>Accessory Designe Guidelines for Janina Devices</h1>
+    <div class="acImage">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+
+    </div>
+ </section>
 
     </main>
 
+
+
+
+
+
+
+    <!-- ========= GSAP CDN  ========= -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <!-- ========= SCROLL TRIGGER CDN  ========= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+        integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ========= CUSTOM JS  ========= -->
+    <script src="/Home/script.js"></script>
 </body>
 
 </html>

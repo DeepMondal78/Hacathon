@@ -47,6 +47,41 @@ document.addEventListener("DOMContentLoaded", ()=> {
       
       cursor();
 
-
-
 });
+
+const watchImages = [
+    "/Home/image/Home-hero-watch.png",
+    "/Home/image/image.png",
+    "/Home/image/image2.png",
+    "/Home/image/watch4.png",
+    "/Home/image/watch5.png"
+];
+
+let currentIndex = 0;
+const watchImg = document.getElementById("watch-img");
+const nextBtn = document.getElementById("next-watch");
+const prevBtn = document.getElementById("prev-watch");
+
+nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % watchImages.length;
+    watchImg.src = watchImages[currentIndex];
+});
+
+prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + watchImages.length) % watchImages.length;
+    watchImg.src = watchImages[currentIndex];
+});
+
+// ==== CircleText Animetion ====
+const text = document.getElementById("image-text");
+const content = "• APPLE WATCH • SERIES 6 • 44MM ALUMINUM & CERAMIC CASE • ION-X GLASS • GPS • LTE • WR-50M •";
+
+const chars = content.split("");
+const angle = 360 / chars.length; // Auto spacing
+
+text.innerHTML = chars
+  .map(
+    (char, i) =>
+      `<span class="char" style="transform: rotate(${i * angle}deg);">${char}</span>`
+  )
+  .join("");
