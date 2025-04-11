@@ -1,14 +1,14 @@
-document.addEventListener("DOMContentLoaded", ()=> {
+document.addEventListener("DOMContentLoaded", () => {
 
     // ==== NavMenu Mouse Hover Animetion ====
-    
+
     function animateMenuItem(el) {
         let letters = el.textContent.split('').map(letter => {
             return `<span data-letter="${letter}">${letter}</span>`;
         }).join('');
         el.innerHTML = letters;
     }
-    
+
     document.querySelectorAll('.menu-item').forEach(item => {
         animateMenuItem(item);
         let chars = item.querySelectorAll('span');
@@ -30,24 +30,24 @@ const watchImages = [
     "./assets/images/image(3).webp",
     "./assets/images/image(4).webp",
     "./assets/images/image(5).webp",
-  ];
-  
-  let currentIndex = 0;
-  const watchImg = document.getElementById("watch-img");
-  
-  function updateImage() {
+];
+
+let currentIndex = 0;
+const watchImg = document.getElementById("watch-img");
+
+function updateImage() {
     watchImg.style.opacity = 0;
     setTimeout(() => {
-      watchImg.src = watchImages[currentIndex];
-      watchImg.style.opacity = 1;
+        watchImg.src = watchImages[currentIndex];
+        watchImg.style.opacity = 1;
     }, 300);
-  }
-  
-  setInterval(() => {
+}
+
+setInterval(() => {
     currentIndex = (currentIndex + 1) % watchImages.length;
     updateImage();
-  }, 3000);
-  
+}, 3000);
+
 
 // ==== CircleText Animetion ====
 const text = document.getElementById("image-text");
@@ -57,11 +57,11 @@ const chars = content.split("");
 const angle = 360 / chars.length; // Auto spacing
 
 text.innerHTML = chars
-  .map(
-    (char, i) =>
-      `<span class="char" style="transform: rotate(${i * angle}deg);">${char}</span>`
-  )
-  .join("");
+    .map(
+        (char, i) =>
+            `<span class="char" style="transform: rotate(${i * angle}deg);">${char}</span>`
+    )
+    .join("");
 
 // ==== Hover Image Animetion ====
 
@@ -70,35 +70,35 @@ const preview = document.querySelector(".image-preview");
 const previewImg = document.getElementById("preview-img");
 
 smarts.forEach((smart) => {
-  const pTag = smart.querySelector("p");
+    const pTag = smart.querySelector("p");
 
-  smart.addEventListener("mouseenter", () => {
-    const imgSrc = smart.getAttribute("data-image");
-    previewImg.src = imgSrc;
+    smart.addEventListener("mouseenter", () => {
+        const imgSrc = smart.getAttribute("data-image");
+        previewImg.src = imgSrc;
 
-    const rect = pTag.getBoundingClientRect();
+        const rect = pTag.getBoundingClientRect();
 
-    preview.style.display = "block";
+        preview.style.display = "block";
 
-    gsap.to(preview, {
-      x: rect.left,
-      y: rect.top - 240,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power3.out"
+        gsap.to(preview, {
+            x: rect.left,
+            y: rect.top - 240,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power3.out"
+        });
     });
-  });
 
-  smart.addEventListener("mouseleave", () => {
-    gsap.to(preview, {
-      opacity: 0,
-      duration: 0.4,
-      ease: "power2.inOut",
-      onComplete: () => {
-        preview.style.display = "none";
-      }
+    smart.addEventListener("mouseleave", () => {
+        gsap.to(preview, {
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.inOut",
+            onComplete: () => {
+                preview.style.display = "none";
+            }
+        });
     });
-  });
 });
 
 
