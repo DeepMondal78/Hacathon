@@ -14,7 +14,7 @@ We collaborated on design, development, and animations to bring this idea to lif
 
 ##  Live Preview
 
-🔗 [View Live Project](https://your-live-site-url.com)
+🔗 [View Live Project](https://techzoneluanch-code-crafters-round-1.netlify.app/collection)
 
 ---
 
