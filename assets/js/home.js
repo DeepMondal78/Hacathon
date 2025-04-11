@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
 });
 // ==== Hero Section Watch Animetion ====
 const watchImages = [
-    "/Home/image/image(1).png",
-    "/Home/image/image(2).png",
-    "/Home/image/image(3).png",
-    "/Home/image/image(4).png",
-    "/Home/image/image(5).png"
+    "./assets/images/image(1).webp",
+    "./assets/images/image(2).webp",
+    "./assets/images/image(3).webp",
+    "./assets/images/image(4).webp",
+    "./assets/images/image(5).webp",
   ];
   
   let currentIndex = 0;
@@ -62,3 +62,43 @@ text.innerHTML = chars
       `<span class="char" style="transform: rotate(${i * angle}deg);">${char}</span>`
   )
   .join("");
+
+// ==== Hover Image Animetion ====
+
+const smarts = document.querySelectorAll(".smart");
+const preview = document.querySelector(".image-preview");
+const previewImg = document.getElementById("preview-img");
+
+smarts.forEach((smart) => {
+  const pTag = smart.querySelector("p");
+
+  smart.addEventListener("mouseenter", () => {
+    const imgSrc = smart.getAttribute("data-image");
+    previewImg.src = imgSrc;
+
+    const rect = pTag.getBoundingClientRect();
+
+    preview.style.display = "block";
+
+    gsap.to(preview, {
+      x: rect.left,
+      y: rect.top - 240,
+      opacity: 1,
+      duration: 0.5,
+      ease: "power3.out"
+    });
+  });
+
+  smart.addEventListener("mouseleave", () => {
+    gsap.to(preview, {
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.inOut",
+      onComplete: () => {
+        preview.style.display = "none";
+      }
+    });
+  });
+});
+
+

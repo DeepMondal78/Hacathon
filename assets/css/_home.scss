@@ -9,10 +9,9 @@ html,
 body {
   position: relative;
   width: 100vw;
-  height: 100vh;
   background: #111;
   color: white;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   cursor: url("cursor.png");
 }
 
@@ -217,6 +216,7 @@ main .watchTheam .circle {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
   width: var(--width, 200px);
   height: var(--height, 200px);
   border-radius: 100%;
@@ -228,7 +228,7 @@ main .watchTheam .circle {
 main .watchTheam .logo {
   position: absolute;
   background-color: #fff;
-  background: url(/Home/image/image\(6\).png);
+  background: url(/assets/images/image\(6\).webp);
   background-size: cover;
   width: 350px;
   height: 350px;
@@ -294,15 +294,90 @@ main .watchTheam .text .char {
 }
 main .acDesigne {
   width: 100%;
-  display: flex;
   justify-content: center;
   text-align: center;
   font-family: "Inter";
   font-size: 2rem;
 }
-main .acDesigne .div1 {
-  width: 500px;
-  height: 30px;
-  border: 12px solid #fff;
-  background-color: #00ff00;
+main .acDesigne .acImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .acDesigne .acImage img {
+  mix-blend-mode: exclusion;
+}
+main .acDesigne .smart {
+  width: 100%;
+  height: 120px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+main .acDesigne .smart:hover {
+  background: #1a1a1a;
+}
+main .acDesigne .smart number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: 50%;
+  font-weight: bold;
+}
+main .acDesigne .smart p {
+  flex: 1;
+  margin: 0 40px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #ccc;
+}
+main .acDesigne .smart .fa-arrow-right {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.smart:hover main .acDesigne .smart .fa-arrow-right {
+  transform: translateX(5px);
+  border-color: white;
+}
+main .acDesigne .hr {
+  width: 100%;
+  padding: 0 80px;
+}
+main .acDesigne .hr hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-width: 0.5px;
+}
+main .acDesigne .image-preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+main .acDesigne .image-preview img {
+  width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+main .acDesigne .image-preview.active {
+  display: block;
+  opacity: 1;
 }
