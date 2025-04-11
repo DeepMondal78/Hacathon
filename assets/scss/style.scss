@@ -11,8 +11,10 @@ body {
     background: #040608;
 
 }
-@import "flexbox";
-@import "backdropfilter";
+
+@import "base";
+@import "flexbox"; 
+@import "backdropfilter"; 
 @import "button";
 @import "navbar";
 @import "home";
@@ -21,4 +23,4 @@ body {
 @import "earbuds-section";
 @import "smartphone-section";
 @import "laptopsection";
-@import "footer";
+@import "footer"; 
