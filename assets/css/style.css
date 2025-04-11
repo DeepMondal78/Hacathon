@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -140,7 +141,7 @@ main {
 main .cursor {
   width: 50%;
   height: 50%;
-  background: rgba(94, 255, 89, 0.2784313725);
+  background: rgba(94, 255, 89, 0.278);
   border-radius: 50%;
   animation: blob 8s infinite ease-in-out;
   position: absolute;
@@ -155,23 +156,28 @@ main .cursor {
     transform: scale(1) translate(-50%, -50%);
     border-radius: 50%;
   }
+
   25% {
     transform: scale(1.1, 0.9) translate(-50%, -50%);
     border-radius: 45% 55% 60% 40%;
   }
+
   50% {
     transform: scale(0.95, 1.05) translate(-50%, -50%);
     border-radius: 60% 40% 45% 55%;
   }
+
   75% {
     transform: scale(1.05, 0.95) translate(-50%, -50%);
     border-radius: 50% 60% 40% 50%;
   }
+
   100% {
     transform: scale(1) translate(-50%, -50%);
     border-radius: 50%;
   }
 }
+
 main .main-cursor {
   position: absolute;
   width: 1.5rem;
@@ -218,7 +224,7 @@ main .hero-section .aboutWatch .exploreBtn {
 
 main .hero-section .aboutWatch .exploreBtn.exploreBtn:hover {
   cursor: pointer;
-  background-color: rgba(0, 255, 0, 0.8509803922);
+  background-color: rgba(0, 255, 0, 0.851);
 }
 
 main .hero-section .watch {
@@ -270,7 +276,8 @@ main .userSection .userLoved .userImage {
   display: flex;
 }
 
-main .userSection .userLoved .userImage .user1 img, main .userSection .userLoved .userImage .user2 img {
+main .userSection .userLoved .userImage .user1 img,
+main .userSection .userLoved .userImage .user2 img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -306,10 +313,6 @@ main .watchTheam .circle {
   width: var(--width, 200px);
   height: var(--height, 200px);
   border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
 }
 
 main .watchTheam .logo {
@@ -327,7 +330,6 @@ main .watchTheam .text {
   width: 100%;
   height: 100%;
   animation: rotateText 15s linear infinite;
-  -webkit-animation: rotateText 15s linear infinite;
 }
 
 main .watchTheam .text .char {
@@ -342,46 +344,46 @@ main .watchTheam .text .char {
     font-size: 2em;
   }
 }
+
 @keyframes rotateText {
   0% {
     transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
   }
 }
+
 @media (max-width: 500px) {
   main .watchTheam .circle {
     --width: 300px;
     --height: 300px;
   }
 }
+
 @media (max-width: 350px) {
   main .watchTheam .circle {
     --width: 220px;
     --height: 220px;
   }
+
   main .watchTheam .text .char {
     font-size: 0.7em;
   }
 }
+
 @media (max-width: 230px) {
   main .watchTheam .circle {
     --width: 150px;
     --height: 150px;
   }
+
   main .watchTheam .text .char {
     font-size: 0.4em;
   }
 }
+
 main .acDesigne {
   width: 100%;
   justify-content: center;
@@ -447,7 +449,7 @@ main .acDesigne .smart .fa-arrow-right {
   transition: all 0.3s ease;
 }
 
-.smart:hover main .acDesigne .smart .fa-arrow-right {
+main .acDesigne .smart:hover .fa-arrow-right {
   transform: translateX(5px);
   border-color: white;
 }
@@ -515,6 +517,7 @@ body {
   position: relative;
   z-index: 9;
 }
+
 .features-section .bg-overly,
 .features-section .sec-bg-overly {
   width: 30rem;
@@ -524,14 +527,17 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .features-section .bg-overly {
   top: -14%;
   right: -12%;
 }
+
 .features-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .features-section__title {
   font-size: 36px;
   font-weight: bold;
@@ -539,18 +545,21 @@ body {
   z-index: 9;
   font-family: "montserrat-latin-800";
 }
+
 .features-section__subtitle {
   font-size: 28px;
   color: #fff;
   margin: 10px 0;
   z-index: 9;
 }
+
 .features-section__description {
   font-size: 18px;
   color: #fff;
   margin-bottom: 40px;
   z-index: 9;
 }
+
 .features-section .container {
   width: 100%;
   max-width: 1200px;
@@ -558,6 +567,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .features-section__content-wrapper {
   display: flex;
   justify-content: center;
@@ -574,6 +584,7 @@ body {
   height: 25rem;
   border-radius: 50%;
 }
+
 .watch-ui .icon {
   position: absolute;
   width: 5rem;
@@ -589,52 +600,62 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .watch-ui .icon.top {
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .watch-ui .icon.top-right {
   top: 15%;
   right: 1%;
   transform: translateY(-50%);
 }
+
 .watch-ui .icon.right {
   top: 50%;
   right: -9%;
   transform: translateY(-50%);
 }
+
 .watch-ui .icon.bottom-right {
   bottom: 15%;
   right: 1%;
   transform: translateY(50%);
 }
+
 .watch-ui .icon.bottom {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .watch-ui .icon.bottom-left {
   bottom: 15%;
   left: 4%;
   transform: translateY(50%);
 }
+
 .watch-ui .icon.left {
   top: 50%;
   left: -9%;
   transform: translateY(-50%);
 }
+
 .watch-ui .icon.top-left {
   top: 16%;
   left: 3%;
   transform: translateY(-50%);
 }
+
 .watch-ui .watch-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .watch-ui .watch-center img {
   width: 180px;
   height: auto;
@@ -643,6 +664,7 @@ body {
 .sub-bottom-headig {
   z-index: 9 !important;
 }
+
 .sub-bottom-headig p {
   font-size: 18px;
   color: #fff !important;
@@ -655,6 +677,7 @@ body {
   padding: 30px;
   position: relative;
 }
+
 .choose-section .bg-overly,
 .choose-section .sec-bg-overly {
   width: 35rem;
@@ -664,20 +687,24 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .choose-section .bg-overly {
   top: 11%;
   right: 7%;
 }
+
 .choose-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .choose-section .choose-section__title {
   color: #fff;
   text-align: center;
   font-weight: 600;
   font-size: 2rem;
 }
+
 .choose-section .choose_section-wrapper {
   display: flex;
   flex-direction: row;
@@ -686,23 +713,27 @@ body {
   flex-wrap: wrap;
   gap: 5rem;
 }
+
 .choose-section .choose_box {
   margin-top: 50px;
   width: 350px;
   position: relative;
   flex-shrink: 0 !important;
 }
+
 .choose-section .item-img {
   width: 100%;
   height: 350px;
   flex-shrink: 0;
 }
+
 .choose-section img {
   width: 18rem;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .choose-section .watch-fectures-box {
   height: 350px;
   display: flex;
@@ -712,17 +743,20 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .choose-section .watch-fectures-box .fectures-item-box {
   width: 90px;
   height: 90px;
   border-radius: 50%;
 }
+
 .choose-section .watch-fectures-box .fectures-item-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .choose-section .choose_bottom_part {
   width: 100%;
   height: auto;
@@ -733,11 +767,13 @@ body {
   position: absolute;
   bottom: -20%;
 }
+
 .choose-section .choose_bottom_part .sub-heading-part {
   font-weight: 600;
   margin-top: 2rem;
   font-family: "montserrat-latin-800";
 }
+
 .choose-section .sec-wrapper {
   margin-top: 50px;
 }
@@ -747,6 +783,7 @@ body {
   width: 100%;
   padding: 30px;
 }
+
 .our-collection h1 {
   text-align: center;
   z-index: 9;
@@ -754,6 +791,7 @@ body {
   font-size: 2rem;
   font-family: "montserrat-latin-800";
 }
+
 .our-collection .container {
   margin-top: 4rem;
   display: flex;
@@ -771,13 +809,14 @@ body {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 20px;
   text-align: center;
   transition: all 0.3s ease;
 }
+
 .card .card-overly {
   border-radius: 20px;
   left: 0;
@@ -788,20 +827,23 @@ body {
   background: rgba(255, 255, 255, 0.05);
   z-index: 99;
 }
+
 .card .card-body {
   width: 100%;
   height: 100%;
   z-index: 99;
   background-color: red;
   -webkit-clip-path: circle(var(--clip) at 50% 50%);
-          clip-path: circle(var(--clip) at 50% 50%);
+  clip-path: circle(var(--clip) at 50% 50%);
 }
+
 .card img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
+
 .card .btn {
   margin-top: 15px;
   padding: 8px 20px;
@@ -813,9 +855,11 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .card .btn:hover {
   background: #00cc58;
 }
+
 .card .like-icon {
   position: absolute;
   bottom: 15px;
@@ -824,6 +868,7 @@ body {
   color: white;
   cursor: pointer;
 }
+
 .card .like-icon:hover {
   color: #ff4d4d;
 }
@@ -833,6 +878,7 @@ body {
     width: 10rem;
   }
 }
+
 .collection {
   width: 100%;
   padding: 4rem 2rem;
@@ -840,16 +886,18 @@ body {
   color: white;
   position: relative;
 }
+
 .collection .cursor-picture {
   position: absolute;
   opacity: 0;
   width: 250px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   pointer-events: none;
   transform: scale(0.8);
   z-index: 20;
 }
+
 .collection .bg-overly,
 .collection .sec-bg-overly {
   width: 35rem;
@@ -859,41 +907,49 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .collection .bg-overly {
   top: -19%;
   right: -15%;
 }
+
 .collection .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .collection .title {
   font-size: 1.5rem;
   letter-spacing: 1px;
   margin-bottom: 1rem;
 }
+
 .collection .main-heading {
   padding: 1rem;
   margin: auto;
   position: relative;
 }
+
 .collection .main-heading .animPara {
   width: 100%;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 .collection .main-heading .animPara .word {
   display: inline-block;
   font-size: 2rem;
   margin-right: 1rem;
   overflow: hidden;
 }
+
 .collection .main-heading .animPara .word span {
   display: inline-block;
   font-size: 2rem;
   transform: translateY(100%);
   opacity: 0;
 }
+
 .collection .main-heading .animPara .imgdiv {
   pointer-events: none;
   position: absolute;
@@ -903,13 +959,14 @@ body {
   z-index: 99;
   background-color: red;
 }
+
 .collection .main-heading .animPara .imgdiv img {
   transform: translateY(100%);
   opacity: 0;
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .products-section {
@@ -917,6 +974,7 @@ body {
   height: 100vh;
   position: relative;
 }
+
 .products-section .bg-overly,
 .products-section .sec-bg-overly {
   width: 35rem;
@@ -926,10 +984,12 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .products-section .bg-overly {
   top: -19%;
   right: -15%;
 }
+
 .products-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
@@ -941,14 +1001,14 @@ body {
   height: 100%;
   z-index: 99;
   -webkit-clip-path: circle(var(--clip) at 50% 50%);
-          clip-path: circle(var(--clip) at 50% 50%);
+  clip-path: circle(var(--clip) at 50% 50%);
 }
 
 .vdiv video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .cricle {
@@ -963,6 +1023,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .cricle i {
   font-size: 60px !important;
   color: #fff;
@@ -972,6 +1033,7 @@ body {
   padding: 2rem;
   position: relative;
 }
+
 .earbuds-section .bg-overly,
 .earbuds-section .sec-bg-overly {
   width: 35rem;
@@ -981,14 +1043,17 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .earbuds-section .bg-overly {
   top: -19%;
   right: -15%;
 }
+
 .earbuds-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .earbuds-section .section-title {
   text-align: center;
   font-size: 2rem;
@@ -996,16 +1061,19 @@ body {
   color: #fff;
   margin-bottom: 2rem;
 }
+
 .earbuds-section .earbuds-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
 @media (max-width: 768px) {
   .earbuds-section .earbuds-grid {
     grid-template-columns: 1fr;
   }
 }
+
 .earbuds-section .earbuds-grid .earbuds-card {
   position: relative;
   background: #282933;
@@ -1017,12 +1085,14 @@ body {
   -webkit-backdrop-filter: blur(35px);
   z-index: 9;
 }
+
 .earbuds-section .earbuds-grid .earbuds-card .product-img {
   width: 100%;
   max-width: 25rem;
   margin: 0 auto;
   display: block;
 }
+
 .earbuds-section .earbuds-grid .earbuds-card button {
   position: relative;
   padding: 0.5rem 2rem;
@@ -1034,6 +1104,7 @@ body {
   overflow: hidden;
   z-index: 2;
 }
+
 .earbuds-section .earbuds-grid .earbuds-card button::after {
   position: absolute;
   content: "";
@@ -1048,10 +1119,12 @@ body {
   transition: 0.3s all ease-in;
   z-index: -1;
 }
+
 .earbuds-section .earbuds-grid .earbuds-card button:hover::after {
   cursor: pointer;
   top: -100%;
 }
+
 .earbuds-section .earbuds-grid .earbuds-card .heart-icon {
   position: absolute;
   bottom: 1rem;
@@ -1067,6 +1140,7 @@ body {
   position: relative;
   text-align: center;
 }
+
 .smartphone-section .bg-overly,
 .smartphone-section .sec-bg-overly {
   width: 35rem;
@@ -1076,24 +1150,29 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .smartphone-section .bg-overly {
   top: -19%;
   right: -15%;
 }
+
 .smartphone-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .smartphone-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
 .smartphone-section .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   justify-items: center;
 }
+
 .smartphone-section .card {
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 12px;
@@ -1108,22 +1187,26 @@ body {
   -webkit-backdrop-filter: blur(35px);
   z-index: 9;
 }
+
 .smartphone-section .card:hover {
   transform: scale(1.05);
 }
+
 .smartphone-section .card img {
   width: 100%;
   height: 80%;
   border-radius: 10px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
+
 .smartphone-section .card .card-footer {
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .smartphone-section .card .card-footer button {
   position: relative;
   padding: 0.5rem 2rem;
@@ -1135,6 +1218,7 @@ body {
   overflow: hidden;
   z-index: 2;
 }
+
 .smartphone-section .card .card-footer button::after {
   position: absolute;
   content: "";
@@ -1149,15 +1233,18 @@ body {
   transition: 0.3s all ease-in;
   z-index: -1;
 }
+
 .smartphone-section .card .card-footer button:hover::after {
   cursor: pointer;
   top: -100%;
 }
+
 .smartphone-section .card .card-footer .heart {
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .smartphone-section {
     grid-template-columns: 1fr;
@@ -1169,6 +1256,7 @@ body {
   padding: 2rem;
   height: 100vh;
 }
+
 .laptop-section .bg-card {
   position: absolute;
   background-color: #2A2D35;
@@ -1177,6 +1265,7 @@ body {
   width: 35rem;
   height: 35rem;
 }
+
 .laptop-section .bg-overly,
 .laptop-section .sec-bg-overly {
   width: 35rem;
@@ -1186,25 +1275,30 @@ body {
   filter: blur(50px);
   position: absolute;
 }
+
 .laptop-section .bg-overly {
   top: -19%;
   right: -15%;
 }
+
 .laptop-section .sec-bg-overly {
   left: -4%;
   bottom: -10%;
 }
+
 .laptop-section .laptop-member {
   position: relative;
   text-align: center;
   width: 100%;
   height: 100%;
 }
+
 .laptop-section .laptop-member h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #fff;
 }
+
 .laptop-section .laptop-member .laptop-card {
   position: absolute;
   top: 50%;
@@ -1214,22 +1308,26 @@ body {
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card {
     width: 95%;
     height: 50vh;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-img {
   width: 100%;
   height: 100%;
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info {
   position: absolute;
   bottom: 0;
@@ -1238,66 +1336,81 @@ body {
   color: white;
   text-align: left;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info {
     height: 12vh;
     left: 0.75rem;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info h3 {
   color: #5AFF00;
   font-size: 1.25rem;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info h3 {
     font-size: 1rem;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info h1 {
   font-size: 4rem;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info h1 {
     font-size: 2rem;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand {
     gap: 0.5rem;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand img {
   height: 1.5rem;
 }
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand img {
     height: 0.75rem;
   }
 }
+
 .laptop-section .laptop-member .laptop-card .laptop-info .laptop-brand h4 {
   font-size: 1.125rem;
 }
+
 .laptop-section .laptop-member #card-one {
   top: 130%;
   background-color: rgb(222, 101, 27);
 }
+
 .laptop-section .laptop-member #card-two {
   top: 230%;
   background-color: rgb(176, 255, 59);
 }
+
 .laptop-section .laptop-member #card-three {
   top: 250%;
   background-color: rgb(176, 13, 165);
 }
+
 .laptop-section .laptop-member #card-four {
   top: 350%;
   background-color: rgb(13, 25, 94);
 }
+
 .laptop-section .laptop-member #card-five {
   top: 450%;
   background-color: rgb(156, 9, 9);
