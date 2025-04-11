@@ -7,14 +7,14 @@ A modern, responsive website to showcase tech products including **smartwatches,
 ##  Hackathon Project
 
 This project was built as part of a **Hackathon submission** by Team:  
-**Joni, Sudip Halder, and Deep**  
+**Joni Halder, Sudip Das Ghosh, and Deep Mondal**  
 We collaborated on design, development, and animations to bring this idea to life.
 
 ---
 
 ##  Live Preview
 
-🔗 [View Live Project](https://your-live-site-url.com)
+🔗 [View Live Project](https://techzoneluanch-code-crafters-round-1.netlify.app/collection)
 
 ---
 

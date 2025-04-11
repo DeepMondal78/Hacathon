@@ -909,25 +909,28 @@ body {
 }
 
 .collection .bg-overly {
-  top: -19%;
-  right: -15%;
+  top: 47%;
+  right: -23%;
 }
 
 .collection .sec-bg-overly {
-  left: -4%;
-  bottom: -10%;
+  left: -43%;
+  bottom: 48%;
+  z-index: -1;
 }
 
 .collection .title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   letter-spacing: 1px;
   margin-bottom: 1rem;
+  font-family: "montserrat-latin-700-normal";
 }
 
 .collection .main-heading {
   padding: 1rem;
   margin: auto;
   position: relative;
+  font-family: "montserrat-latin-500-normal";
 }
 
 .collection .main-heading .animPara {
@@ -967,6 +970,11 @@ body {
   height: 100% !important;
   -o-object-fit: cover;
   object-fit: cover;
+}
+@media (max-width: 550px) {
+  .collection .main-heading .main-heading {
+    width: 90vw;
+  }
 }
 
 .products-section {
@@ -1011,7 +1019,7 @@ body {
   object-fit: cover;
 }
 
-.cricle {
+.circle {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -1022,9 +1030,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
+<<<<<<< HEAD
 
 .cricle i {
+=======
+.circle i {
+>>>>>>> 1ae43a93c15beb0f0135296f59496074b2070937
   font-size: 60px !important;
   color: #fff;
 }
@@ -1046,6 +1059,7 @@ body {
 
 .earbuds-section .bg-overly {
   top: -19%;
+  z-index: -1;
   right: -15%;
 }
 
@@ -1060,12 +1074,14 @@ body {
   font-weight: bold;
   color: #fff;
   margin-bottom: 2rem;
+  font-family: "montserrat-latin-500-normal";
 }
 
 .earbuds-section .earbuds-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  justify-items: center;
 }
 
 @media (max-width: 768px) {
@@ -1252,18 +1268,17 @@ body {
 }
 
 .laptop-section {
-  position: relative;
-  padding: 2rem;
   height: 100vh;
+  font-family: "montserrat-latin-500-normal";
 }
 
 .laptop-section .bg-card {
   position: absolute;
-  background-color: #2A2D35;
+  opacity: 0.9;
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
-  width: 35rem;
-  height: 35rem;
+  width: 100%;
+  height: 100%;
 }
 
 .laptop-section .bg-overly,
@@ -1271,6 +1286,7 @@ body {
   width: 35rem;
   height: 35rem;
   background-color: rgb(26, 97, 43);
+  opacity: 0.9;
   border-radius: 50%;
   filter: blur(50px);
   position: absolute;
@@ -1305,7 +1321,9 @@ body {
   left: 50%;
   width: 70%;
   height: 75vh;
+  background-color: #21212C;
   transform: translate(-50%, -50%);
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -1336,7 +1354,15 @@ body {
   color: white;
   text-align: left;
 }
+<<<<<<< HEAD
 
+=======
+@media (max-width: 850px) {
+  .laptop-section .laptop-member .laptop-card .laptop-info h1 {
+    font-size: 2rem !important;
+  }
+}
+>>>>>>> 1ae43a93c15beb0f0135296f59496074b2070937
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info {
     height: 12vh;
@@ -1393,25 +1419,79 @@ body {
 
 .laptop-section .laptop-member #card-one {
   top: 130%;
-  background-color: rgb(222, 101, 27);
 }
 
 .laptop-section .laptop-member #card-two {
   top: 230%;
-  background-color: rgb(176, 255, 59);
 }
 
 .laptop-section .laptop-member #card-three {
   top: 250%;
-  background-color: rgb(176, 13, 165);
 }
 
 .laptop-section .laptop-member #card-four {
   top: 350%;
-  background-color: rgb(13, 25, 94);
 }
 
 .laptop-section .laptop-member #card-five {
   top: 450%;
-  background-color: rgb(156, 9, 9);
+}
+
+.footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 4rem 1rem;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer .footer-top {
+  text-align: center;
+}
+.footer .footer-top h2 {
+  font-size: 2rem;
+  color: #5aff00;
+}
+.footer .footer-top p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer .footer-links .footer-column {
+  min-width: 150px;
+}
+.footer .footer-links .footer-column h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #5aff00;
+}
+.footer .footer-links .footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-links .footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+.footer .footer-links .footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+.footer .footer-links .footer-column ul li a:hover {
+  color: #5aff00;
+}
+.footer .footer-bottom {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #888;
 }
