@@ -1,7 +1,5 @@
 @import "variables";
 
-// collection page style
-
 .collection {
     width: 100%;
     padding: 4rem 2rem;
@@ -23,32 +21,36 @@
     .sec-bg-overly {
         width: 35rem;
         height: 35rem;
-        background-color: $bg-overly; // make sure this variable is defined
+        background-color: $bg-overly;
         border-radius: 50%;
         filter: blur(50px);
         position: absolute;
     }
 
     .bg-overly {
-        top: -19%;
-        right: -15%;
+        top: 47%;
+        right: -23%;
     }
 
     .sec-bg-overly {
-        left: -4%;
-        bottom: -10%;
+        left: -43%;
+        bottom: 48%;
+        z-index: -1;
     }
 
     .title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         letter-spacing: 1px;
         margin-bottom: 1rem;
+        font-family: "montserrat-latin-700-normal";
+
     }
 
     .main-heading {
         padding: 1rem;
         margin: auto;
         position: relative;
+        font-family: "montserrat-latin-500-normal";
 
 
         .animPara {
@@ -87,11 +89,15 @@
                     height: 100% !important;
                     object-fit: cover;
                 }
-            }   
+            }
 
         }
 
-
+        @media (max-width:550px) {
+            .main-heading {
+                width: 90vw;
+            }
+        }
     }
 }
 
@@ -135,7 +141,7 @@
     object-fit: cover;
 }
 
-.cricle {
+.circle {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -146,6 +152,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 
     i {
         font-size: 60px !important;
