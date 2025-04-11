@@ -971,6 +971,7 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
 @media (max-width: 550px) {
   .collection .main-heading .main-heading {
     width: 90vw;
@@ -1019,25 +1020,8 @@ body {
   object-fit: cover;
 }
 
-.circle {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-<<<<<<< HEAD
 
-.cricle i {
-=======
 .circle i {
->>>>>>> 1ae43a93c15beb0f0135296f59496074b2070937
   font-size: 60px !important;
   color: #fff;
 }
@@ -1354,15 +1338,13 @@ body {
   color: white;
   text-align: left;
 }
-<<<<<<< HEAD
 
-=======
 @media (max-width: 850px) {
   .laptop-section .laptop-member .laptop-card .laptop-info h1 {
     font-size: 2rem !important;
   }
 }
->>>>>>> 1ae43a93c15beb0f0135296f59496074b2070937
+
 @media (max-width: 640px) {
   .laptop-section .laptop-member .laptop-card .laptop-info {
     height: 12vh;
@@ -1442,6 +1424,7 @@ body {
   color: #fff;
   padding: 4rem 1rem;
 }
+
 .footer .container {
   max-width: 1200px;
   margin: auto;
@@ -1449,47 +1432,58 @@ body {
   flex-direction: column;
   gap: 3rem;
 }
+
 .footer .footer-top {
   text-align: center;
 }
+
 .footer .footer-top h2 {
   font-size: 2rem;
   color: #5aff00;
 }
+
 .footer .footer-top p {
   font-size: 1rem;
   margin-top: 0.5rem;
   color: #ccc;
 }
+
 .footer .footer-links {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .footer .footer-links .footer-column {
   min-width: 150px;
 }
+
 .footer .footer-links .footer-column h4 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: #5aff00;
 }
+
 .footer .footer-links .footer-column ul {
   list-style: none;
   padding: 0;
 }
+
 .footer .footer-links .footer-column ul li {
   margin-bottom: 0.5rem;
 }
+
 .footer .footer-links .footer-column ul li a {
   text-decoration: none;
   color: #ccc;
   font-size: 0.95rem;
 }
+
 .footer .footer-links .footer-column ul li a:hover {
   color: #5aff00;
 }
+
 .footer .footer-bottom {
   text-align: center;
   font-size: 0.875rem;
